@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Knowledge Graph Generator</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f7fa;
+      }
+      .navbar {
+        background-color: #2c3e50;
+        color: white;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .nav-title {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+      .nav-button {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background-color 0.3s;
+      }
+      .nav-button:hover {
+        background-color: #2980b9;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 0 20px;
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .samples {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+      .sample-card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 500px;
+        transition: transform 0.3s;
+      }
+      .sample-card:hover {
+        transform: translateY(-5px);
+      }
+      .sample-img {
+        width: 100%; /* Take full width of container */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 200px; /* Optional: Set maximum height */
+        object-fit: contain; /* Show entire image without cropping */
+        display: block; /* Remove extra space below image */
+        margin: 0 auto; /* Center the image horizontally */
+      }
+      .sample-info {
+        padding: 15px;
+      }
+      .footer {
+        text-align: center;
+        margin-top: 50px;
+        padding: 20px;
+        background-color: #2c3e50;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-title">Knowledge Graph Generator by Shivangi Gupta</div>
+      <a href="/generate" class="nav-button">Generate Graph</a>
+    </nav>
+
+    <div class="container">
+      <div class="header">
+        <h1>Welcome to Knowledge Graph Generator</h1>
+        <p>Transform your text content into interactive knowledge graphs</p>
+      </div>
+
+      <h2>Sample Graphs</h2>
+      <div class="samples">
+        <div class="sample-card">
+          <img
+            src="{% static 'images/SampleInput.png' %}"
+            alt="Scientific Paper"
+            class="sample-img"
+          />
+          <div class="sample-info">
+            <h3>Sample Input</h3>
+          </div>
+        </div>
+
+        <div class="sample-card">
+          <img
+            src="{% static 'images/SampleOutput.png' %}"
+            alt="News Article"
+            class="sample-img"
+          />
+          <div class="sample-info">
+            <h3>Sample Output</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Created by: Sivangi Gupta | Roll No: 2401315</p>
+      <p>Course: M. Tech. | Specialization: Computer Science</p>
+    </div>
+  </body>
+</html>
